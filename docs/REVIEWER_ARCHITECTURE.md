@@ -1,0 +1,19 @@
+# Reviewer Architecture
+
+The reviewer operates as a sequence of claims, not as a single score. It begins with evidence receipts from an observational repository: screenshots, route maps, component states, tokens, interaction traces, performance measurements, copy, analytics summaries, open questions, and the originating commit. Every receipt is assigned an identity and a confidence level.
+
+Tokenization converts evidence into comparable design and strategy dimensions without erasing the original source. The visual layer records hierarchy, scale, spacing rhythm, density, alignment, contrast, typography, color roles, material cues, depth, texture, edge language, iconography, imagery, motion grammar, interaction pressure, and responsive behavior. The strategic layer records audience, job to be done, value exchange, funnel position, trust requirement, differentiation, operational cost, measurement horizon, reversibility, and dependency risk. The narrative layer records voice, posture, pacing, disclosure, metaphor, proof, invitation, and whether the interface acts as guide, salesperson, archive, instrument, or environment.
+
+The comparison stage must produce at least one serious alternative to the preferred idea and one deliberately conservative alternative. An alternative is serious only when it could rationally win under a different weighting of goals. Straw alternatives are rejected by the schema.
+
+The decision architecture is represented as a graph. Evidence supports or weakens claims. Claims support strategies. Strategies imply choices. Choices create effects, risks, opportunity costs, and preservation obligations. The recommendation is therefore reconstructable rather than merely persuasive.
+
+A defense is valid only when it names the idea's central claim, strongest evidence, strongest objection, answer to that objection, boundary conditions, failure signal, and the observation that would cause the reviewer to change its mind. The engine must be able to say that an attractive idea is strategically wrong, that a strategically useful idea is aesthetically crude, or that a tasteful idea is too expensive for its likely return.
+
+Taste is treated as calibrated judgment under constraints. The reviewer evaluates coherence between intent and execution, specificity rather than generic trend mimicry, proportional control, hierarchy, restraint, contextual and cultural fit, material credibility, interaction dignity, legibility, and disciplined surprise. It also performs an anti-taste review for gratuitous spectacle, decorative incoherence, imitation without transformation, excessive density, false luxury, manipulative urgency, accessibility used as an afterthought, and motion without semantic purpose.
+
+No aggregate taste score can approve an idea. Scores expose tension and enable comparison; they do not replace judgment. A proposal with moderate novelty and exceptional coherence may be preferable to one with high novelty and poor fit. A human reviewer receives the evidence, the weights, the dissenting interpretation, and the bottom line.
+
+The bottom line states the recommended move in plain language, the expected upside, the most consequential downside, confidence, effort, reversibility, cost of delay, cost of error, and the next evidence-gathering action. It also states whether the reviewer is defending, narrowing, deferring, or rejecting the idea.
+
+The first runtime should remain observational. It may read repositories and create review artifacts or issues. It may not edit product repositories, merge pull requests, deploy code, access production analytics directly, or grant itself broader permissions.
