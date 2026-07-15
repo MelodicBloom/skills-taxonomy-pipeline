@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://melodicbloom.dev/schemas/observation-envelope.schema.json",
+  "title": "MelodicBloom Observation Envelope",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["envelope_version", "repository", "revision", "captured_at", "decision_prompt", "observations", "authority"],
+  "properties": {
+    "envelope_version": {"const": "1.0.0"},
+    "repository": {"type": "string", "pattern": "^[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+$"},
+    "revision": {"type": "string", "minLength": 7},
+    "captured_at": {"type": "string", "format": "date-time"},
+    "decision_prompt": {"type": "string", "minLength": 10},
+    "observations": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "kind", "source", "statement", "confidence"],
+        "properties": {
+          "id": {"type": "string"},
+          "kind": {"enum": ["repository", "code", "visual", "content", "workflow", "performance", "accessibility", "analytics", "human-note"]},
+          "source": {"type": "string"},
+          "statement": {"type": "string", "minLength": 3},
+          "confidence": {"type": "number", "minimum": 0, "maximum": 1},
+          "tags": {"type": "array", "items": {"type": "string"}}
+        }
+      }
+    },
+    "artifacts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "kind", "uri"],
+        "properties": {
+          "name": {"type": "string"},
+          "kind": {"enum": ["screenshot", "report", "trace", "manifest", "mockup", "other"]},
+          "uri": {"type": "string"},
+          "sha256": {"type": "string"}
+        },
+        "additionalProperties": false
+      }
+    },
+    "authority": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["read_only", "source_mutation", "deployment"],
+      "properties": {
+        "read_only": {"const": true},
+        "source_mutation": {"const": false},
+        "deployment": {"const": false}
+      }
+    }
+  }
+}
