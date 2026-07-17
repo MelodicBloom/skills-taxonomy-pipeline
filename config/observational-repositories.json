@@ -1,0 +1,77 @@
+{
+  "version": "1.0.0",
+  "reviewer_repository": "MelodicBloom/skills-taxonomy-pipeline",
+  "default_mode": "observe",
+  "repositories": [
+    {
+      "repository": "MelodicBloom/omni-loom-case-study",
+      "class": "web-application",
+      "visibility": "public",
+      "status": "active",
+      "decision_domains": ["layout", "narrative", "conversion", "interaction", "performance"],
+      "evidence_paths": ["package.json", "src", "public", ".github/workflows"],
+      "review_cadence": "weekly",
+      "authority": "read-only"
+    },
+    {
+      "repository": "MelodicBloom/chromaflora-prime",
+      "class": "web-application",
+      "visibility": "public",
+      "status": "active",
+      "decision_domains": ["brand", "layout", "lead-generation", "motion", "accessibility"],
+      "evidence_paths": ["package.json", "src", "app", "public"],
+      "review_cadence": "weekly",
+      "authority": "read-only"
+    },
+    {
+      "repository": "MelodicBloom/svg-filter-lab",
+      "class": "design-system",
+      "visibility": "public",
+      "status": "active",
+      "decision_domains": ["visual-language", "component-architecture", "performance", "craft"],
+      "evidence_paths": ["package.json", "src", "docs", "examples"],
+      "review_cadence": "biweekly",
+      "authority": "read-only"
+    },
+    {
+      "repository": "MelodicBloom/flore-orthography-memphis-ui",
+      "class": "design-system",
+      "visibility": "public",
+      "status": "active",
+      "decision_domains": ["style", "composition", "typography", "motion", "restraint"],
+      "evidence_paths": ["package.json", "src", "public", "docs"],
+      "review_cadence": "biweekly",
+      "authority": "read-only"
+    },
+    {
+      "repository": "MelodicBloom/design-standards-2026-2027",
+      "class": "knowledge-system",
+      "visibility": "public",
+      "status": "reference",
+      "decision_domains": ["standards", "taste-calibration", "accessibility", "governance"],
+      "evidence_paths": ["README.md", "docs", "schemas"],
+      "review_cadence": "monthly",
+      "authority": "read-only"
+    },
+    {
+      "repository": "MelodicBloom/agent-runtime-control-center",
+      "class": "agent-runtime",
+      "visibility": "private",
+      "status": "credential-pending",
+      "decision_domains": ["agent-authority", "runtime-risk", "approval", "auditability"],
+      "evidence_paths": ["README.md", "src", "policies", "schemas", ".github/workflows"],
+      "review_cadence": "weekly",
+      "authority": "read-only"
+    },
+    {
+      "repository": "MelodicBloom/nse-kb",
+      "class": "knowledge-system",
+      "visibility": "private",
+      "status": "credential-pending",
+      "decision_domains": ["evidence", "semantics", "provenance", "knowledge-quality"],
+      "evidence_paths": ["README.md", "schemas", "docs", "data"],
+      "review_cadence": "weekly",
+      "authority": "read-only"
+    }
+  ]
+}
