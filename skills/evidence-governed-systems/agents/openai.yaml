@@ -1,0 +1,5 @@
+interface:
+  display_name: Evidence-Governed Systems
+  short_description: Apply provenance-aware systems architecture and receipts
+  default_prompt: Apply evidence-governed, regenerative systems architecture to this task. Establish authority, separate evidence from inference, define boundaries, validate the smallest coherent unit, and produce a recoverable receipt.
+
