@@ -1,0 +1,5 @@
+interface:
+  display_name: Product Design Image Template
+  short_description: Build reusable image templates from PNG references
+  default_prompt: Create or refine a Product Design image template from a supplied PNG reference, preserving provenance and separating visual invariants from allowed variables.
+
